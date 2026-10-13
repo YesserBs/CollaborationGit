@@ -4,6 +4,7 @@
 #include <signal.h>
 #include <string.h>
 
+// Ceci est une autre modification
 void handler_sigpipe(int sig);
 void client_service(int sock, int argc, char *argv[]);
 
