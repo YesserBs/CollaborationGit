@@ -4,13 +4,20 @@
 #include <signal.h>
 #include <string.h>
 
+<<<<<<< HEAD
 // Ceci est une autre modification
 void handler_sigpipe(int sig);
 void client_service(int sock, int argc, char *argv[]);
 
+=======
+>>>>>>> 7ea3c96d9f050d0d40539075f3d79b82ed29bed4
 void handler_sigpipe(int sig) {
   printf("signal SIGPIPE recu\n");
   exit(2);
+}
+
+void print_msg(char *buf) {
+  printf("-->buf = %s\n", buf);
 }
 
 void client_service(int sock, int argc, char *argv[]) {
@@ -20,7 +27,7 @@ void client_service(int sock, int argc, char *argv[]) {
   while(1) {
     scanf("%s",buf);
     strcat(buf, "\n");
-    printf("-->buf = %s\n", buf);
+    print_msg(buf);
     write(sock, buf, strlen(buf));
   }
 }
