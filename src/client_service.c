@@ -4,8 +4,6 @@
 #include <signal.h>
 #include <string.h>
 
-
-
 void handler_sigpipe(int sig) {
   printf("signal SIGPIPE recu\n");
   exit(2);
